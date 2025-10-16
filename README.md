@@ -38,18 +38,84 @@ Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
 
+full adder 
+
+<img width="347" height="201" alt="image" src="https://github.com/user-attachments/assets/f3360d42-5c33-4962-a17e-84a8b01d7a0e" />
+
+full subractor 
+
+<img width="350" height="200" alt="image" src="https://github.com/user-attachments/assets/1637eb4f-b8be-404b-a91e-41f2e2d6e61c" />
+
+
+
 **Procedure**
 
-Write the detailed procedure here
+1.Type the program in Quartus software.
+
+2.Compile and run the program.
+
+3.Generate the RTL schematic and save the logic diagram.
+
+4.Create nodes for inputs and outputs to generate the timing diagram.
+
 
 **Program:**
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+```i)FULL ADDER
+
+module fa(a,b,cin,sum,carry);
+input a,b,cin;
+output sum,carry;
+assign sum=( (a ^ b)^cin);
+assign carry= ( (a & b)| ( cin &(a ^ b )));
+endmodule
+
+ii)FULL SUBTRACTOR
+
+module fs(a,b,bin,difference,borrow);
+input a,b,bin;
+output difference,borrow;
+assign difference= ( (a ^ b)^bin);
+assign borrow= ( ( ~a & b)| ( bin & (~(a ^ b ))));
+endmodule
+```
+
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
+
+Developed by:R Tharun Rathish
+
+RegisterNumber:25018411
+
+Date:20/09/25
 */
 
 **RTL Schematic**
 
+full adder
+
+<img width="350" height="178" alt="image" src="https://github.com/user-attachments/assets/48f243d9-d73e-4b1c-bb6b-67f4cd22bc41" />
+
+full subractor
+
+<img width="347" height="166" alt="image" src="https://github.com/user-attachments/assets/533c5e88-2fe3-419d-bd9d-41bd25d8b525" />
+
+
+
+
+
+
+
 **Output Timing Waveform**
+
+full adder
+
+<img width="351" height="188" alt="image" src="https://github.com/user-attachments/assets/e4c7ff98-6761-4c42-95cf-343fd4a170ef" />
+
+full subractor
+
+<img width="351" height="191" alt="image" src="https://github.com/user-attachments/assets/e36485c4-6548-4ffc-aa8a-cda63d031d31" />
+
+
 
 **Result:**
 
